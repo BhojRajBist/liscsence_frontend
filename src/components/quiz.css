@@ -1,0 +1,240 @@
+:root {
+  --option-base-width: auto;
+  margin-top: 7%;
+}
+
+body {
+  zoom: 100%;
+ 
+}
+
+.option {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  transition: background-color 0.3s ease;
+  background-color: #fff;
+  color: #333;
+  /* font-weight: bold; */
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 70%;
+  white-space: normal; /* Prevent options from overflowing */
+}
+
+.option.selected {
+  background-color: #037414;
+  color: #fff;
+}
+
+.option.correct {
+  color: #1000f5;
+}
+
+.option.wrong {
+  background-color: #ed0303;
+}
+
+.option-text {
+  margin-left: 10px;
+}
+
+.quiz-container {
+  text-align: center;
+  margin-top: 7%;
+}
+
+.result-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+/* Styling for the "Submit" button */
+button.submit-button,
+button.show-result-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button.submit-button {
+  background-color: #007bff; /* Blue color for the button */
+  color: #fff; /* White text color */
+}
+
+button.show-result-button {
+  background-color: #28a745; /* Green color for the button */
+  color: #fff; /* White text color */
+}
+
+.attendance-count {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ccc;
+  padding: 5px;
+  border-radius: 4px;
+  margin-top: 7%;
+  position: fixed;
+}
+
+
+.time-display {
+  position: fixed;
+  margin-left: 90%;
+  top: 50px;
+  right: 10px;
+  left:90%;
+  background-color: #ccc;
+  padding: 5px;
+  border-radius: 4px;
+  margin-top: 7%;
+  position: fixed;
+  white-space: nowrap; /* Prevent text from wrapping */
+  display: inline-block; 
+  text-align: right;
+  text-overflow: clip;
+  display: inline-block;
+  max-width: fit-content;
+}
+
+
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 418px) {
+  /* Adjust styles for screens with width up to 418px */
+  .option {
+    padding: 6px 10px;
+    font-size: 12px;
+    display: inline-flex;
+  }
+
+  .quiz-container {
+    margin-top: 15%;
+  }
+
+  /* Styles for .time-display and .attendance-count */
+  .time-display,
+  .attendance-count {
+    position: fixed;
+    background-color: #ccc;
+    padding: 5px;
+    border-radius: 4px;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media screen and (min-width: 419px) and (max-width: 768px) {
+  /* Adjust styles for screens with width from 419px to 768px */
+  .option {
+    padding: 8px 12px;
+    font-size: 14px;
+    max-width: 100%;
+    margin-right: 10%;
+    display: inline-flex;
+  }
+
+  .quiz-container {
+    margin: 10%;
+    margin-top: 10%;
+    text-align: center;
+  }
+  .time-display,
+  .attendance-count {
+    position: fixed;
+    margin-top: 100;
+    top: 200;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 912px) {
+  /* Adjust styles for screens with width from 769px to 912px */
+  .option {
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-right: 10%;
+    max-width: 100%;
+    display: inline-flex;
+  }
+
+  .quiz-container {
+    margin-top: 7%;
+    margin: 10%;
+    text-align: center;
+  }
+
+  .time-display {
+    position: fixed;
+    margin-top: 55;
+    top: 10;
+    left :15;
+  }
+
+  .attendance-count {
+    position: fixed;
+    margin-top: 55;
+    top: 10;
+  }
+}
+
+@media screen and (min-width: 913px) {
+  /* Default styles for screens with width above 912px */
+  .option {
+    padding: 10px 15px;
+    font-size: 18px;
+    margin-right: 10%;
+    max-width: 70%;
+    display: inline-flex;
+  }
+
+  .quiz-container {
+    margin-top: 7%;
+    margin:10%;
+    text-align: center;
+  }
+
+  .time-display{
+    position: fixed;
+    margin-top: 55;
+    top: 10;
+    left:10px;
+  }
+
+  .attendance-count {
+    position: fixed;
+    margin-top: 55;
+    top: 10;
+  }
+
+
+ }
+
+@media (max-width: 767px) {
+ 
+  .time-display{
+    left: auto; 
+    margin-left: 0; 
+    right: 10px; 
+    top: 10px; 
+  }
+
+  .attendance-count {
+    position: fixed;
+    margin-top:65px;
+    top: 10;
+  }
+}

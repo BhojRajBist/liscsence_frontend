@@ -1,0 +1,192 @@
+/* Navbar Styles */
+.enhanced-navbar {
+  background: green;
+}
+
+/* Navbar Item Styles */
+.enhanced-navbar .navbar-nav .nav-link {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-right: 20px;
+  position: relative;
+  display: inline-block;
+  transition: color 0.4s ease;
+}
+
+/* Hover Effect for Navbar Items */
+.enhanced-navbar .navbar-nav .nav-link:hover {
+  color: #ff4500;
+  border: 2px solid #ff4500;
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+/* Gradient Border for Active Navbar Item */
+.enhanced-navbar .navbar-nav .nav-item.active::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(to right, #ff4500, #ffa500);
+}
+
+/* Creative Transition for Navbar Items */
+.enhanced-navbar .navbar-nav .nav-link {
+  transition: color 0.3s ease;
+}
+
+/* Remove Transition for Border and Padding */
+.enhanced-navbar .navbar-nav .nav-link:not(:hover) {
+  transition: none;
+}
+
+/* Hover Color for Mobile Menu Items */
+@media (max-width: 992px) {
+  .navbar-nav .nav-link:hover {
+    color: #00bfff;
+  }
+}
+
+/* Animated Background Color Change on Scroll */
+.enhanced-navbar.navbar-scrolled {
+  background-color: #1a1a1a;
+  transition: background-color 0.5s ease;
+}
+
+/* Subtle Box Shadow on Scroll */
+.enhanced-navbar.navbar-scrolled {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Transform Effect for Navbar Brand */
+.enhanced-navbar .navbar-brand {
+  transition: transform 0.3s ease;
+}
+
+.enhanced-navbar .navbar-brand:hover {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+/* Spacing Between Navbar Components */
+.enhanced-navbar .navbar-nav {
+  margin-right: auto;
+}
+
+.enhanced-navbar .navbar-nav .nav-link {
+  margin-right: 20px;
+}
+
+.enhanced-navbar .navbar-nav .nav-link:hover {
+  border: 2px solid #ff4500;
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+/* Gradient Border for Active Navbar Item */
+.enhanced-navbar .navbar-nav .nav-item.active::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(to right, #ff4500, #ffa500);
+}
+
+/* Smooth Fade-in for Dropdown Menus */
+.enhanced-navbar .navbar-nav .nav-item:hover .dropdown-menu {
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Background Blur Effect When Mobile Menu is Open */
+.enhanced-navbar .navbar-collapse.show {
+  backdrop-filter: blur(8px);
+}
+
+/* Creative Transition for Navbar Items */
+.enhanced-navbar .navbar-nav .nav-link {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.enhanced-navbar .navbar-nav .nav-link:hover {
+  color: #00bfff;
+}
+
+/* Mobile and Tablet Styles */
+@media (max-width: 992px) {
+  /* Hide the Navbar by Default */
+  .navbar-collapse {
+    transform: translateX(-100%);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 999;
+    animation: slideIn 0.1s ease-in-out forwards;
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    40% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    60% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    80% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  /* Style for Mobile Menu Items */
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  /* Style for Mobile Menu Items */
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 993px) {
+  /* Ensure the Navbar is Always Visible on Larger Screens */
+  .navbar-collapse {
+    display: block;
+    transform: translateX(0);
+    opacity: 1;
+    animation: none;
+  }
+}
