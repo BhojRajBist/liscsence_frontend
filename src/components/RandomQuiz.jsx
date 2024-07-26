@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import './quiz.css';
 import Swal from 'sweetalert2';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import parse from 'html-react-parser';
 import { useQuizResults } from './QuizResultsContext';
 
@@ -23,7 +23,7 @@ const RandomQuiz = () => {
   const [disabledQuestions, setDisabledQuestions] = useState([]);
   let questionNumber = 1; 
   // const [quizAttempts, setQuizAttempts] = useState([]); // State to store quiz attempts
-  const history = useHistory();
+  // const history = useHistory();
   const { addQuizResult } = useQuizResults();
 
   const [startTime, setStartTime] = useState(null); // Track quiz start time

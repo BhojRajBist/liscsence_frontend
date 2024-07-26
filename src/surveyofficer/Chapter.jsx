@@ -19,7 +19,7 @@ const Chapter = (props) => {
   const [disabledQuestions, setDisabledQuestions] = useState([]);
   let questionNumber = 1;
   const history = useHistory();
-  const { addQuizResult } = useQuizResults();
+  // const { addQuizResult } = useQuizResults();
 
   const [startTime, setStartTime] = useState(null);
   const [hasPushedResult, setHasPushedResult] = useState(false);
