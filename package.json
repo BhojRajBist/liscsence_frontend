@@ -2,7 +2,7 @@
   "name": "cicd",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://loksewanepal.geoneer.com.np/",
+  "homepage": "https://neclicence.geoneer.com.np/",
   "dependencies": {
     "@jridgewell/sourcemap-codec": "^1.4.15",
     "@rollup/plugin-terser": "^0.4.3",

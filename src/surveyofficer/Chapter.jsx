@@ -4,7 +4,7 @@ import '../components/quiz.css';
 import Swal from 'sweetalert2';
 import { useHistory } from 'react-router-dom';
 import parse from 'html-react-parser';
-import { useQuizResults } from '../components/QuizResultsContext';
+// import { useQuizResults } from '../components/QuizResultsContext';
 import { useLocation } from 'react-router-dom';
 
 const Chapter = (props) => {
